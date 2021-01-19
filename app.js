@@ -9,3 +9,9 @@ app.get('/', (req, res) => {
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
 });
+
+app.get('/demo', (req, res) => {
+  res.set('X-full-stack', '4life');
+  res.status(418);
+  res.send('I prefer coffee');
+})
